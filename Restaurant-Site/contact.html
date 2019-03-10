@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+Name: Louis Trevino
+Date Created: 3/8/2019
+Most recent revision:
+-->
+<html lang="en">
+
+<head>
+  <title>Trevino's Tacos</title>
+</head>
+
+<body>
+  <h1>Trevino's Tacos</h1>
+
+  <hr />
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Menu</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <hr />
+
+  <!--
+    Name:
+    Email:
+    Phone:
+    Reason for Inquiry:
+    Additional Information:
+    Have you been to the restaurant?
+    Best days to contact you:
+  -->
+
+  <form action="submit.html" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" /> <br />
+    <label for="email" >Email:</label>
+    <input type="text" id="email" name="email"/> <br />
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone"/> <br />
+
+    <label for="reasonInquiry">Reason for Inquiry:</label>
+    <select id="reasonInquiry" name="reasonInquiry">
+      <option value="catering">Catering</option>
+      <option value="privateParty">Private Party</option>
+      <option value="feedback">Feedback</option>
+      <option value="other">Other</option>
+    </select><br />
+
+    <label for="info">Additional Information:</label>
+    <textarea id="info" name="info"></textarea><br />
+
+    <label for="attended">Have you been to the restaurant?</label>
+    <input type="radio" id="choice1" name="attended" value="yes">
+    <label for="choice1">yes</label>
+    <input type="radio" id="choice2" name="attended" value="no">
+    <label for="choice2">no</label> <br />
+
+    <label for="contact">Best days to contact you: </label>
+    <input type="checkbox" id="monday" name="contact" value="monday">
+    <label for="monday">M</label>
+    <input type="checkbox" id="tuesday" name="contact" value="tuesday">
+    <label for="tuesday">T</label>
+    <input type="checkbox" id="wednesday" name="contact" value="wednesday">
+    <label for="wednesday">W</label>
+    <input type="checkbox" id="thursday" name="contact" value="thursday">
+    <label for="thursday">Th</label>
+    <input type="checkbox" id="friday" name="contact" value="friday">
+    <label for="friday">F</label><br />
+
+    <input type="button" name="submit" value="Send Request">
+  </form>
+
+  <hr />
+  <p>123 Taco Ln, Taco City, TX, 78245</p>
+  <p>(210)555-TACO</p>
+
+</body>
+
+</html>
