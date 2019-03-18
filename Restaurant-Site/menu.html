@@ -7,7 +7,30 @@ Most recent revision:
 <html lang="en">
 
 <head>
-  <title>Trevino's Tacos</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Trevino's Menu</title>
+
+  <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+
+  <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>
+  body{
+    background-color: lightblue;
+  }
+    article {
+      text-align: center;
+    }
+
+    section {
+      text-align: center;
+    }
+    strong {
+      font-size: 1.5em;
+    }
+  </style>
 </head>
 
 <body>
@@ -16,15 +39,17 @@ Most recent revision:
   <hr />
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="index.html" class="btn btn-outline-dark">Home</a>
+    <a href="menu.html" class="btn btn-outline-dark">Menu</a>
+    <a href="contact.html" class="btn btn-outline-dark">Contact Us</a>
   </nav>
 
   <hr />
+<div class="container">
 
-  <section>
-    <article class="menuItem">
+
+  <section class="row">
+    <article class="menuItem col-4">
       <strong>Burger and Fries</strong><br />
       An American Classic!<br />
       Your choice - with or without cheese<br />
@@ -33,7 +58,7 @@ Most recent revision:
       french fries<br />
       $7.95
     </article>
-    <article class="menuItem">
+    <article class="menuItem col-4">
       <strong>Burger and Fries</strong><br />
       An American Classic!<br />
       Your choice - with or without cheese<br />
@@ -42,7 +67,7 @@ Most recent revision:
       french fries<br />
       $7.95
     </article>
-    <article class="menuItem">
+    <article class="menuItem col-4">
       <strong>Burger and Fries</strong><br />
       An American Classic!<br />
       Your choice - with or without cheese<br />
@@ -51,7 +76,7 @@ Most recent revision:
       french fries<br />
       $7.95
     </article>
-    <article class="menuItem">
+    <article class="menuItem col-4">
       <strong>Burger and Fries</strong><br />
       An American Classic!<br />
       Your choice - with or without cheese<br />
@@ -60,7 +85,7 @@ Most recent revision:
       french fries<br />
       $7.95
     </article>
-    <article class="menuItem">
+    <article class="menuItem col-4">
       <strong>Burger and Fries</strong><br />
       An American Classic!<br />
       Your choice - with or without cheese<br />
@@ -69,7 +94,7 @@ Most recent revision:
       french fries<br />
       $7.95
     </article>
-    <article class="menuItem">
+    <article class="menuItem col-4">
       <strong>Burger and Fries</strong><br />
       An American Classic!<br />
       Your choice - with or without cheese<br />
@@ -80,9 +105,34 @@ Most recent revision:
     </article>
   </section>
 
+  <table border=1px class="col-6">
+    <th colspan="2">
+      Beverages
+    </th>
+    <tr>
+      <td>Root Beer</td>
+      <td>$3.00</td>
+    </tr>
+    <tr>
+      <td>Root Beer</td>
+      <td>$3.00</td>
+    </tr>
+    <tr>
+      <td>Root Beer</td>
+      <td>$3.00</td>
+    </tr>
+    <tr>
+      <td>Root Beer</td>
+      <td>$3.00</td>
+    </tr>
+  </table>
+  </div>
   <hr />
-  <p>123 Taco Lane, San Antonio, TX, 78245</p>
-  <p>(210)555-TACO</p>
+  <footer>
+    <p>123 Taco Lane, San Antonio, TX, 78245</p>
+    <p>(210)555-TACO</p>
+
+  </footer>
 
 </body>
 

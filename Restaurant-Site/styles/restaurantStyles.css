@@ -1,0 +1,27 @@
+h1, footer {
+  text-align: center;
+  font-family: helvetica, sans-serif;
+  background-color: #335566;
+  color: #ffffff;
+  padding: 40px;
+}
+
+.content {
+  background-color: lightgreen;
+}
+
+td{
+  padding: 10px 5px;
+}
+
+table {
+  margin: 30px auto;
+  background-color: #ffffff;
+}
+
+th {
+  padding: 10px 5px;
+}
+tr:nth-child(even) {
+  background-color: #ddd;
+}

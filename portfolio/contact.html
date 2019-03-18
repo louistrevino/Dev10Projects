@@ -2,21 +2,27 @@
 <html>
   <head>
     <title>Contact Me</title>
+
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Contact Me</h1>
+    <header>
+      <h1>Contact Me</h1>
+    </header>
 
-    <hr />
+    <!-- <hr /> -->
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact Me</a>
-      <a href="testimonials.html">Testimonials</a>
+    <nav class="border">
+      <p><a href="index.html">Home</a></p>
+      <p><a href="projects.html">Projects</a></p>
+      <p><a href="contact.html">Contact Me</a></p>
+      <p><a href="testimonials.html">Testimonials</a></p>
+      <div class="clear-float"></div>
+      <!-- <hr style="width: 50%; border: 2px solid blueviolet;" /> -->
     </nav>
 
 
-    <hr />
+    <!-- <hr /> -->
 
     <h2>Information Request</h2>
     <form action="submit.html" method="POST">
@@ -48,9 +54,9 @@
       <fieldset>
         <legend>I have filled in the client questionnaire form:</legend>
         <input type="radio" id="choice1" name="questionnaire" value="yes">
-        <label for="choice1">yes</label><br />
+        <label for="choice1">Yes</label><br />
         <input type="radio" id="choice2" name="questionnaire" value="no">
-        <label for="choice2">no</label>
+        <label for="choice2">No</label>
       </fieldset>
 
       <label for="info">Additional Information</label><br />
@@ -58,6 +64,12 @@
 
       <input type="button" name="submit" value="Submit">
     </form>
-    <hr />
+    <!-- <hr /> -->
+    <footer>
+      <!-- <hr /> -->
+      <p>
+        &copy; 2019 Louis Trevino. All rights reserved.
+      </p>
+    </footer>
   </body>
 </html>

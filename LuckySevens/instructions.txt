@@ -1,0 +1,7 @@
+- Make use of proper HTML as covered in the HTML unit.
+- Use Bootstrap to help with the design of the site.
+- Use JavaScript for the functionality.
+- JavaScript is needed for form validation in making sure that the starting bet is greater than 0.
+- JavaScript can also be used for things such as animations or showing and hiding elements.
+- Use functions to isolate units of work that may be called over and over again.
+- Use past exercises as guides on how to structure your code. Hint: There is a function from a past exercise that you will find extremely useful in this assessment.
