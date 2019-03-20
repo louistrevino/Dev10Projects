@@ -1,85 +1,135 @@
 <!DOCTYPE html>
 <!--
-Name: Louis Trevino
+Name: Louis Treviño
 Date Created: 3/8/2019
 Most recent revision:
 -->
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Contact Trevino's</title>
 
-    <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Contact Lou's Loaves</title>
 
-    <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-      .required {
-        font-weight: bold;
-      }
-    </style>
+  <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
 </head>
 
 <body>
-  <h1>Trevino's Tacos</h1>
+  <noscript>
+    <div class="alert alert-danger text-center">
+      JavaScript is disabled on your browser. This webiste works best with JavaScript enabled.
+    </div>
+  </noscript>
 
-  <hr />
+  <div class="text-center">
+    <div class="jumbotron">
+      <header class="display-4">Lou's Loaves</header>
+      <hr class="my-4">
+      <h4 class="">CONTACT</h4>
+    </div>
+    <hr />
 
-  <nav>
-    <a href="index.html" class="btn btn-outline-dark">Home</a>
-    <a href="menu.html" class="btn btn-outline-dark">Menu</a>
-    <a href="contact.html" class="btn btn-outline-dark">Contact Us</a>
-  </nav>
+    <nav class="">
+      <a href="index.html" class="btn btn-outline-dark"><i class="fas fa-home"></i></a>
+      <a href="menu.html" class="btn btn-outline-dark">Menu</a>
+      <a href="contact.html" class="btn btn-outline-dark">Contact Us</a>
+    </nav>
 
-  <hr />
+    <hr />
 
-  <form action="submit.html" method="POST">
-    <label for="name" class="required">Name:</label>
-    <input type="text" id="name" name="name" /> <br />
-    <label for="email" class="required">Email:</label>
-    <input type="text" id="email" name="email"/> <br />
-    <label for="phone" class="required">Phone:</label>
-    <input type="text" id="phone" name="phone"/> <br />
+    <form id="contactInfo"class="container text-left" style="width:100%; max-width:400px;" onsubmit="return submitForm();">
+      <div class="form-group">
+        <label for="name" class="required">Name:</label>
+        <div id="nameAlert" class="alert alert-danger" style="display:none;">
+          Please enter your name.
+        </div>
+        <input type="text" id="name" class="form-control" name="name" />
+      </div>
+      <div class="form-group">
+        <label for="email" class="required">Email:</label>
+        <div id="emailAlert" class="alert alert-danger" style="display:none;">
+          Please enter your email.
+        </div>
+        <input type="text" id="email" class="form-control" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="phone" class="required">Phone:</label>
+        <div id="phoneAlert" class="alert alert-danger" style="display:none;">
+          Please enter your phone number.
+        </div>
+        <input type="text" id="phone" class="form-control" name="phone" />
+      </div>
+      <div class="form-group">
+        <label for="reasonInquiry">Reason for Inquiry:</label>
+        <select id="reasonInquiry" class="form-control" name="reasonInquiry">
+          <option value="catering">Catering</option>
+          <option value="privateParty">Private Party</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="info">Additional Information:</label>
+        <textarea id="info" class="form-control" name="info"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="attended" class="">Have you been to the restaurant?</label>
+        <div class="form-check form-check-inline">
+          <input type="radio" id="choice1" class="form-check-input" name="attended" value="yes">
+          <label for="choice1" class="form-check-label">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="radio" id="choice2" class="form-check-input" name="attended" value="no">
+          <label for="choice2" class="form-check-label">No</label>
+        </div>
+      </div>
 
-    <label for="reasonInquiry" class="required">Reason for Inquiry:</label>
-    <select id="reasonInquiry" name="reasonInquiry">
-      <option value="catering">Catering</option>
-      <option value="privateParty">Private Party</option>
-      <option value="feedback">Feedback</option>
-      <option value="other">Other</option>
-    </select><br />
 
-    <label for="info">Additional Information:</label>
-    <textarea id="info" name="info"></textarea><br />
+      <div class="form-group">
+        <label for="contact">Best days to contact you: </label><br />
+        <div class="form-check form-check-inline">
+          <input type="checkbox" id="monday" class="form-check-input" name="contact" value="monday">
+          <label for="monday" class="form-check-label">M</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" id="tuesday" class="form-check-input" name="contact" value="tuesday">
+          <label for="tuesday" class="form-check-label">T</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" id="wednesday" class="form-check-input" name="contact" value="wednesday">
+          <label for="wednesday" class="form-check-label">W</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" id="thursday" class="form-check-input" name="contact" value="thursday">
+          <label for="thursday" class="form-check-label">Th</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" id="friday" class="form-check-input" name="contact" value="friday">
+          <label for="friday" class="form-check-label">F</label><br />
+        </div>
 
-    <label for="attended">Have you been to the restaurant?</label>
-    <input type="radio" id="choice1" name="attended" value="yes">
-    <label for="choice1">yes</label>
-    <input type="radio" id="choice2" name="attended" value="no">
-    <label for="choice2">no</label> <br />
+      </div>
 
-    <label for="contact">Best days to contact you: </label>
-    <input type="checkbox" id="monday" name="contact" value="monday">
-    <label for="monday">M</label>
-    <input type="checkbox" id="tuesday" name="contact" value="tuesday">
-    <label for="tuesday">T</label>
-    <input type="checkbox" id="wednesday" name="contact" value="wednesday">
-    <label for="wednesday">W</label>
-    <input type="checkbox" id="thursday" name="contact" value="thursday">
-    <label for="thursday">Th</label>
-    <input type="checkbox" id="friday" name="contact" value="friday">
-    <label for="friday">F</label><br />
+      <input type="submit" id="submit" class="btn btn-outline-dark" style="margin: 20px auto;" name="submit" value="Send Request">
+    </form>
+    <footer class="jumbotron">
+      <p>123 Bread Ln, Sourdough City, TX 12345</p>
+      <p>(123)456-7890</p>
+    </footer>
+  </div>
 
-    <input type="button" name="submit" value="Send Request">
-  </form>
 
-  <hr />
-  <footer>
-    <p>123 Taco Ln, Taco City, TX, 78245</p>
-    <p>(210)555-TACO</p>
-  </footer>
+<!--  Javascript references -->
+  <script type="text/JavaScript" src="contact.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 

@@ -5,7 +5,7 @@ function play(){
   var dice2;
   var rollCount = 0;
   var maxMoney = 0.0;
-  var rollHighestWon = 0;
+  var rollHighestWon = 1;
 
   //get starting Bet
   var startingBet = document.forms["betForm"]["startingBet"].value;
@@ -16,6 +16,7 @@ function play(){
   } else {
     //set game money = starting bet
     gameMoney = startingBet;
+    maxMoney = startingBet;
     //check that there's money to play with
     while(gameMoney > 0.0){
       rollCount++;
@@ -25,16 +26,27 @@ function play(){
 
       //results of roll
       if(dice1 + dice2 == 7){
-        gameMoney += 4;
+        gameMoney = gameMoney + 4;
       } else {
-        gameMoney -= 1;
+        gameMoney = gameMoney - 1;
       }
+
+      if(gameMoney > maxMoney){
+        maxMoney = gameMoney;
+        rollHighestWon = rollCount;
+      }
+
       console.log(gameMoney);
     }
+    document.getElementById("results").style.display = "inline";
+    document.getElementById("startingBetResults").innerText = startingBet;
+    document.getElementById("rollCount").innerText = rollCount;
+    document.getElementById("maxMoney").innerText = maxMoney;
+    document.getElementById("rollHighestWon").innerText = rollHighestWon;
 
-    document.getElementById("results").style.display = "block";
+
   }
 
 
-
+  return false;
 }

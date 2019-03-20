@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Name: Louis Trevino
+Name: Louis Treviño
 Date Created: 3/8/2019
 Most recent revision:
 -->
@@ -10,45 +10,90 @@ Most recent revision:
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Trevino's Tacos</title>
-
+  <title>Lou's Loaves</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <h1>Trevino's Tacos</h1>
+  <noscript>
+    <div class="alert alert-danger text-center">
+      JavaScript is disabled on your browser. This webiste works best with JavaScript enabled.
+    </div>
+  </noscript>
 
-  <hr />
+  <div class=" text-center">
+    <div class="jumbotron">
+      <header class="display-4">Lou's Loaves</header>
+      <hr class="my-4">
+      <h4 class=""><em>BREAKING!</em> We're opening a new location!</h4>
 
-  <nav class="">
-    <a href="index.html" class="btn btn-outline-dark">Home</a>
-    <a href="menu.html" class="btn btn-outline-dark">Menu</a>
-    <a href="contact.html" class="btn btn-outline-dark">Contact Us</a>
-  </nav>
+    </div>
 
-  <hr />
-  <div class="container content">
+    <hr />
 
+    <nav class="">
+      <a href="index.html" class="btn btn-outline-dark"><i class="fas fa-home"></i></a>
+      <a href="menu.html" class="btn btn-outline-dark">Menu</a>
+      <a href="contact.html" class="btn btn-outline-dark">Contact Us</a>
+    </nav>
 
-    <img src="" width="400px" height="150px" alt="" style="display: block; margin: 30px auto;" />
+    <hr />
+    <h6>Latest News:</h6>
+    <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <p>
+            We're opening a new location!
+          </p>
+        </div>
+        <div class="carousel-item">
+          <p>
+            We're rolling out our seasonal menu, with special options for this season.
+          </p>
+        </div>
+        <div class="carousel-item">
+          <p>
+            The Drink of the Month is SG Special Brew.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-lg-2">
 
+        </div>
+        <img src="images/burger.jpg" class="col-lg-8" style="width:100%; height:60%;" alt="" />
+      </div>
 
-    <p>
-      Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Blandit turpis cursus in hac habitasse platea dictumst quisque sagittis. Viverra nam libero justo laoreet sit amet cursus sit amet. Vitae congue eu consequat ac felis
-      donec et odio. <span style="background-color: #cbcbcb">Urna id volutpat lacus laoreet non curabitur gravida. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Tellus id interdum velit laoreet id donec. Ipsum faucibus vitae
-        aliquet nec ullamcorper sit amet. Nunclobortis mattis aliquam faucibus purus in massa tempor nec. Nunc mi ipsum faucibus vitae. Libero enim sed faucibus turpis in eu mi bibendum. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Vivamus arcu felis bibendum ut tristiqueet. Tristique nulla aliquet enim tortor at auctor.</span> Viverra suspendisse potenti nullam ac tortor vitae purus. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Libero id faucibus nisl tincidunt eget nullam non nisi.
-      Lacuslaoreet non curabitur gravida arcu. Elit duis tristique sollicitudin nibh sit amet. Non blandit massa enim nec dui nunc mattis enim.
-    </p>
+      <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+          <p>
+            Lou's Loaves began with me deciding to try to make sourdough bread one day. My bread making evolved into other types
+            of breads like hamburger buns, cinnamon rolls, tortillas, to just about anything made with dough. The more I made
+            bread, the more I realized that I don't just love making bread, but I love making things that go well with bread
+            too! This is how the restaurant came to be. Come on in and try what could be your favorite meal!
+          </p>
+        </div>
+      </div>
+</div>
+    <hr />
+    <footer class="jumbotron">
+      <p>123 Bread Ln, Sourdough City, TX 12345</p>
+      <p>(123)456-7890</p>
+    </footer>
   </div>
-  <hr />
-  <footer>
-    <p>123 Taco Lane, San Antonio, TX, 78245</p>
-    <p>(210)555-TACO</p>
-  </footer>
 
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
